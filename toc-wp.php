@@ -1,4 +1,3 @@
-```php
 function mri_slug_from_string( $slug ) {
 
 	# wp_strip_all_tags didn't suffice
@@ -67,4 +66,4 @@ function mri_filter_the_content_in_the_main_loop( $content ) {
 	}
 	return $content;
 }
-```
+

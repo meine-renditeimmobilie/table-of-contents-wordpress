@@ -16,3 +16,4 @@ The blog content needs to be in this form:
 </section>
 ```
 
+This little plugin / function will highlight all sections that are currently in the browser viewport. So, typically, 2 or even 3 sections titles will be highlighted. 

@@ -49,3 +49,21 @@ function mri_onpagenav_save( $post_id, $post ) {
 	update_post_meta( $post_id, "_mrionpagenav", $mri_onpagenav );
 }
 
+add_filter( 'the_content', 'mri_filter_the_content_in_the_main_loop', 1 );
+function mri_filter_the_content_in_the_main_loop( $content ) {
+
+	// Check if we're inside the main loop in a single Post.
+	if ( is_single() && in_the_loop() && is_main_query() ) {
+	
+		$new_content = preg_replace_callback( '/<section(.*?)>(.*?)<h2(.*?)>(.*?)<\/h2>/ms', function( $match ) {
+
+			$slug = mri_slug_from_string( $match[4] );
+			return '<section' . $match[1] . ' id="' . $slug . '">' . $match[2] . '<h2' . $match[3] . '>' . $match[4] . '</h2>';
+			
+		}, $content );	
+	
+		return $new_content;
+	}
+	return $content;
+}
+

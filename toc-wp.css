@@ -1,0 +1,71 @@
+.mri-toc {
+	position: relative;
+	padding-bottom: 100px;
+	padding-top: 16px;
+
+}
+.mri-toc > nav {
+	position: sticky;
+	top: 90px;
+	
+ 	max-height: calc(100vh - 90px);
+    overflow-y: auto;	
+}
+
+.mri-toc a {
+	color: #1c1f3c;
+    line-height: 1.05;
+    text-decoration: none;
+    letter-spacing: 0;
+    font-size: .95em;
+	
+	display: block;
+	padding: 7px 10px 6px;
+}
+.mri-toc a:hover {
+	text-decoration: none;
+}
+
+
+
+.mri-toc h2 {
+	display: block;
+    font-size: .8em;
+    letter-spacing: 2px;
+    margin: 1.5em 0 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.mri-toc ul {
+	line-height: 1;
+	list-style: none;
+	padding: 0;
+}
+.mri-toc ul li {
+	margin: 0 0 2px 0;
+}
+
+
+.single-post article section[id],
+.single-post article h2,
+.single-post article h3 {
+	scroll-margin-top: 100px;
+	scroll-padding-top: 100px;
+}
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+.mri-toc li.mri-toc-highlight {
+	background: #eee;
+}
+.mri-toc li.mri-toc-highlight a {
+	color: #000;
+}
+
+

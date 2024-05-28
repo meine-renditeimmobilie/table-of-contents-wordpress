@@ -1,8 +1,8 @@
 # table-of-contents-wordpress
-Auto table of contents code for Wordpress blog posts
+Auto table of contents for Wordpress blog posts
 
 Put the code of toc-wp-php into your functions.php.
-The blog posts content needs to be in this form:
+The HTML structure of your blog posts content needs to be in this form:
 
 ```
 <section>
